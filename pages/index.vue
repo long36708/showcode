@@ -206,7 +206,7 @@ export default {
             return [
                 {
                     name: 'preferences',
-                    title: 'Preferences',
+                    title: '偏好设置',
                     click: () => (showingPreferencesModal.value = true),
                 },
                 {
@@ -214,12 +214,12 @@ export default {
                 },
                 {
                     name: 'save-as-template',
-                    title: 'Save As Template',
+                    title: '保存为模板',
                     click: saveAsTemplate,
                 },
                 {
                     name: 'open-templates-modal',
-                    title: 'Open Saved Templates',
+                    title: '打开保存的模板',
                     click: () => (showingTemplatesModal.value = true),
                 },
                 {
@@ -227,12 +227,12 @@ export default {
                 },
                 {
                     name: 'export-config',
-                    title: 'Export Configuration',
+                    title: '导出配置',
                     click: () => currentProject.value?.export(),
                 },
                 {
                     name: 'import-config',
-                    title: 'Import Configuration',
+                    title: '导入配置',
                     click: importNewProject,
                 },
                 {
@@ -240,12 +240,12 @@ export default {
                 },
                 {
                     name: 'help',
-                    title: 'Help Guide',
+                    title: '帮助引导',
                     click: () => (showingHelpModal.value = true),
                 },
                 {
                     name: 'updates',
-                    title: 'Changelog',
+                    title: '更新日志',
                     click: () => (showingChangelogModal.value = true),
                 },
             ];

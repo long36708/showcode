@@ -27,7 +27,7 @@
                     <CheckCircleIcon v-if="copied" class="w-4 h-4 text-green-400" />
                     <ClipboardIcon v-else class="w-4 h-4" />
                     <span class="hidden sm:inline">
-                        {{ copied ? 'Copied!' : 'Copy Image' }}
+                        {{ copied ? 'Copied!' : '复制图片' }}
                     </span>
                 </Button>
 
@@ -39,10 +39,10 @@
                     class="inline-flex rounded-lg shadow"
                 >
                     <ShareIcon class="w-4 h-4" />
-                    <span class="hidden sm:inline"> Export Image </span>
+                    <span class="hidden sm:inline"> 导出图片 </span>
                 </Dropdown>
 
-                <Button
+<!--                <Button
                     v-if="!$config.isDesktop && $config.isDistributing"
                     size="sm"
                     href="/buy"
@@ -52,7 +52,7 @@
                 >
                     <ShoppingBagIcon class="w-4 h-4" />
                     <span class="hidden sm:inline"> Desktop App </span>
-                </Button>
+                </Button>-->
             </div>
         </div>
 
@@ -258,9 +258,9 @@
             <ControlTabs
                 @changed="controlTabChanged"
                 :tabs="[
-                    { name: 'code-preview', title: 'Preview' },
-                    { name: 'themes', title: 'Themes' },
-                    { name: 'backgrounds', title: 'Backgrounds' },
+                    { name: 'code-preview', title: '预览' },
+                    { name: 'themes', title: '主题' },
+                    { name: 'backgrounds', title: '背景' },
                 ]"
             >
                 <template #default="{ active }">
@@ -1047,7 +1047,7 @@ export default {
             }[method];
 
             generateImageFromPreview(method, preferences.exportPixelRatio).then((dataUrl) => {
-                const filename = name.value || title.value || 'Untitled-1';
+                const filename = name.value || title.value || '未命名-1';
 
                 download(dataUrl, `${filename}.${extension}`);
             });

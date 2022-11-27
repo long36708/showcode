@@ -32,11 +32,11 @@ export default function () {
     const projects = ref([]);
 
     const canAddNewProject = computed(() => {
-        return $config.isDesktop || projects.value.length < 2;
+        return $config.isDesktop || projects.value.length < 200;
     });
 
     const canAddNewTemplate = computed(() => {
-        return $config.isDesktop || templates.all().length < 3;
+        return $config.isDesktop || templates.all().length < 300;
     });
 
     const currentProject = computed(() => {
@@ -75,11 +75,11 @@ export default function () {
      * @returns {Store|null}
      */
     const addNewProject = (id = null) => {
-        if (!canAddNewProject.value) {
+       /* if (!canAddNewProject.value) {
             $bus.$emit('alert', 'danger', 'Download the desktop app to unlock more tabs.');
 
             return;
-        }
+        }*/
 
         const newProject = makeProjectStore(id);
 

@@ -56,7 +56,7 @@
                     class="p-0 text-sm font-medium text-center bg-transparent border-0 shadow-none focus:ring-0"
                 />
 
-                <span v-else class="text-sm font-medium"> Untitled-1 </span>
+                <span v-else class="text-sm font-medium"> 未命名-1 </span>
             </div>
         </div>
 

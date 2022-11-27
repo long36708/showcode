@@ -32,7 +32,7 @@
             />
 
             <span v-show="!editingName" class="text-xs truncate">
-                {{ name || 'Untitled Project' }}
+                {{ name || '未命名项目' }}
             </span>
         </button>
 
@@ -42,7 +42,7 @@
             @click.native="$emit('duplicate')"
             @focus.native="focusing = true"
             @blur.native="focusing = false"
-            v-tooltip="'Duplicate Project'"
+            v-tooltip="'复制项目'"
         >
             <span v-if="hovering || focusing">
                 <CopyIcon class="w-4 h-4" />
@@ -54,7 +54,7 @@
             @click.native="toggleEditing"
             @focus.native="focusing = true"
             @blur.native="focusing = false"
-            v-tooltip="editingName ? 'Save Project Name' : 'Change Project Name'"
+            v-tooltip="editingName ? '保存项目名称' : '修改项目名称'"
         >
             <span v-if="hovering || focusing || editingName">
                 <CheckIcon class="w-4 h-4" v-if="editingName" />
@@ -67,7 +67,7 @@
             @focus.native="focusing = true"
             @blur.native="focusing = false"
             @click.native="() => (editingName ? (editingName = false) : $emit('close'))"
-            v-tooltip="'Close Project'"
+            v-tooltip="'关闭项目'"
         >
             <XIcon />
         </TabButton>

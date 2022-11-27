@@ -13,7 +13,7 @@ module.exports = {
 
     publicRuntimeConfig: {
         isDistributing: true,
-        isDesktop: process.env.IS_DESKTOP === 'true',
+        isDesktop: process.env.IS_DESKTOP === 'false',
         platform: {
             windows: process.platform === 'win32',
             darwin: process.platform === 'darwin',

@@ -68,7 +68,7 @@ export default function (id, initialValue = null) {
             export() {
                 const state = this.clone();
 
-                const name = state.tab.name || 'Untitled Project';
+                const name = state.tab.name || '未命名项目';
 
                 download(JSON.stringify(state, null, 2), `${name}.json`);
             },
@@ -83,7 +83,7 @@ export default function (id, initialValue = null) {
 
                 project.tab.created_at = new Date();
 
-                project.tab.name = project.tab.name || 'Untitled Project';
+                project.tab.name = project.tab.name || '未命名项目';
 
                 templates.add(project);
             },
